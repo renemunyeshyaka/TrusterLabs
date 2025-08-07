@@ -1,0 +1,3223 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Discover TrusterLabs, a forward-thinking cybersecurity and IT consultancy startup founded by expert cybersecurity professionals and entrepreneurs. Our team specializes in SOC analysis, digital forensics, penetration testing, and cyber operations, delivering innovative security solutions to safeguard public and private sector digital assets. Trust in our hands-on expertise to protect your digital future.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="social-media" content="TrusterLabs - Cutting-edge cybersecurity and IT consultancy. Expert team in SOC, digital forensics, penetration testing, and cyber operations. Protect your digital assets with us." />
+    <meta name="author" content="Jean René MUNYESHYAKA, TrusterLabs' Software Engineer " />
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>TrusterLabs - Advanced Cybersecurity Solutions</title>
+    <meta
+      name="description"
+      content="Fortify. Empower. Defend. Cutting-edge cybersecurity training and solutions"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass border-b border-blue-800/50 p-0.5">
+      <div class="container mx-auto px-6 py-1">
+        <div class="flex justify-between items-center">
+          <a href="/" class="flex items-center gap-2">
+            <span class="text-2xl font-bold text-white">
+              <img
+                src="./images/picture.jpeg"
+                alt="TRUSTER LABS Logo"
+                width="180"
+                height="160"
+                class="rounded-full"
+              />
+            </span>
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="/"
+              class="nav-link px-3 py-2 text-sm font-medium text-white hover:text-secondary-400 transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link px-3 py-2 text-sm font-medium text-white hover:text-secondary-400 transition-colors"
+              >About</a
+            >
+            <a
+              href="#services"
+              class="nav-link px-3 py-2 text-sm font-medium text-white hover:text-secondary-400 transition-colors"
+              >Services</a
+            >
+            <a
+              href="#training"
+              class="nav-link px-3 py-2 text-sm font-medium text-white hover:text-secondary-400 transition-colors"
+              >Training</a
+            >
+            <a
+              href="#resources"
+              class="nav-link px-3 py-2 text-sm font-medium text-white hover:text-secondary-400 transition-colors"
+              >Resources</a
+            >
+            <button
+              class="nav-link px-3 py-2 text-sm font-medium bg-secondary-500 hover:bg-secondary-400 text-primary-900 font-bold px-4 py-2 rounded-md transition-colors"
+            >
+              <a
+                href="#contact"
+                class="px-3 py-2 text-sm font-medium text-white hover:text-primary-400 transition-colors"
+                >Request Consultation</a
+              >
+            </button>
+          </div>
+
+          <!-- Mobile menu button -->
+          <button
+            class="md:hidden text-white focus:outline-none"
+            id="mobile-menu-button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              id="menu-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              id="close-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-nav md:hidden hidden mt-4 pb-4" id="mobile-nav">
+          <a
+            href="/"
+            class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+            >Services</a
+          >
+          <a
+            href="#training"
+            class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+            >Training</a
+          >
+          <a
+            href="#resources"
+            class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+            >Resources</a
+          >
+          <button
+            class="mt-2 w-full bg-secondary-500 hover:bg-secondary-400 text-primary-900 font-bold px-4 py-2 rounded-md"
+          >
+            <a
+              href="#contact"
+              class="block px-3 py-4 rounded-md text-base font-medium text-white hover:bg-blue-700"
+              >Request Consultation</a
+            >
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <section
+      id="home"
+      class="relative h-screen flex items-center justify-center overflow-hidden"
+    >
+      <!-- Video Background -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-primary-900/80 z-10"></div>
+        <iframe
+          class="w-full h-full object-cover opacity-60"
+          src="https://www.youtube.com/embed/uPIJkkmpohs?si=nF3_oU8dIfAsMzn9&autoplay=1&mute=1&loop=1&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&enablejsapi=1&playlist=uPIJkkmpohs"
+          title="Cybersecurity background video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+
+      <!-- Text Reveal Effect -->
+      <div class="container mx-auto px-6 z-30 text-center animate-on-scroll">
+        <!-- Company Name with Text Reveal Effect -->
+
+        <h1
+          class="text-6xl md:text-8xl font-extrabold tracking-tight leading-tight drop-shadow-xl mb-6"
+        >
+          <span class="text-stroke">TRUSTER</span>
+          <span class="text-fill animate-text-reveal">LABS</span>
+          
+        </h1>
+
+        <!-- Motto -->
+        <h2
+          class="text-lg md:text-xl text-blue-100 font-medium uppercase tracking-widest mb-4"
+        >
+          Fortify · Empower · Defend
+        </h2>
+
+        <!-- Slogan -->
+
+        <p class="text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto animate-fade-in"
+        >Cybersecurity Excellence | Born in Rwanda | Built for Africa
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 animate-slide-up">
+          <button
+            
+            class="bg-secondary-500 hover:bg-secondary-400 text-primary-900 font-bold px-8 py-3 rounded-md shadow-lg hover:shadow-xl transition-all"
+          > Explore Services
+          </button>
+          <button
+            class="text-white border-2 border-white hover:bg-white/10 px-8 py-3 rounded-md font-bold transition-all"
+          >
+            Learn About Us
+          </button>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-20"
+      >
+        <svg
+          class="w-8 h-8 text-white"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 dark:text-white mb-4">
+            About TrusterLabs
+          </h2>
+          <p
+            class="text-xl text-primary-800 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            Pioneering cybersecurity innovation through education, empowerment,
+            and regional resilience
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h3 class="text-2xl font-bold text-blue-900 dark:text-white mb-4">
+              Who We Are
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+              TRUSTERLABS LTD is a forward-thinking cybersecurity and IT
+              consultancy startup established by a team of highly trained
+              cybersecurity professionals and entrepreneurs. With a background
+              in SOC analysis, Digital forensics, Penetration testing, and cyber
+              operations, our team brings hands-on experience and cutting-edge
+              expertise to the digital security needs of both public and private
+              sectors.
+            </p>
+            <p class="text-gray-700 dark:text-gray-300 mb-6">
+              We are not just a company; we are a movement of passionate
+              cybersecurity professionals dedicated to transforming the digital
+              security landscape across Africa and beyond.
+            </p>
+          </div>
+
+          <!-- Mission & Vision Flip Cards -->
+
+          <div class="flip-card perspective-1000 h-96">
+            <div class="flip-card-inner relative w-full h-full preserve-3d">
+              <!-- Front of the card -->
+              <div
+                class="flip-card-front absolute w-full h-full backface-hidden bg-blue-900 text-white rounded-lg p-8 shadow-lg flex flex-col justify-center"
+              >
+                <div class="text-yellow-400 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+                <p class="text-lg mb-4">
+                  To deliver trusted cybersecurity services, training, and
+                  customized digital solutions that protect, educate, and
+                  empower organizations and individuals to thrive securely in
+                  the digital age.
+                </p>
+              </div>
+
+              <!-- Back of the card -->
+              <div
+                class="flip-card-back absolute w-full h-full backface-hidden bg-yellow-400 text-blue-900 rounded-lg p-8 shadow-lg flex flex-col justify-center"
+              >
+                <div class="text-blue-900 mb-4">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-10 w-10"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+                <p class="text-lg mb-4">
+                  To be a leading cybersecurity and IT consultancy firm in
+                  Africa, known for innovation, integrity, and impact, securing
+                  digital futures and empowering the next generation of cyber
+                  leaders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div
+          class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 animate-on-scroll"
+        >
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-900 dark:text-blue-300 mb-2">
+              Integrity
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300">
+              We uphold the highest ethical standards in all our engagements.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-900 dark:text-blue-300 mb-2">
+              Innovation
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300">
+              We deliver creative and effective cybersecurity solutions tailored
+              to client needs.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-900 dark:text-blue-300 mb-2">
+              Excellence
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300">
+              We strive for the highest quality in service, training, and
+              execution.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-900 dark:text-blue-300 mb-2">
+              Empowerment
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300">
+              We invest in people, nurturing talent and capacity through skills
+              development.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-8 w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+            </div>
+            <h4 class="text-lg font-bold text-blue-900 dark:text-blue-300 mb-2">
+              Trust
+            </h4>
+            <p class="text-gray-700 dark:text-gray-300">
+              We build lasting relationships through transparency and
+              reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section
+      id="services"
+      class="py-20 bg-white dark:bg-gray-900 animate-on-scroll"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-4">
+            Our Services
+          </h2>
+          <p class="text-lg text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+            Comprehensive cybersecurity solutions tailored to your
+            organization's needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                Cybersecurity Advisory & Consultancy
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Security Architecture Review</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Security Policy Development</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Risk Management and Mitigation Strategies</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Incident Response and Recovery Planning</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                Cybersecurity Assessment & Audits
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Vulnerability Assessments & Penetration Testing</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>SOC Maturity Assessment</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Compliance & Regulatory Audits (ISO 27001, GDPR, NIST,
+                    etc.)</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Infrastructure and Network Security Review</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                IT Audit & Compliance
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Evaluation of IT Governance and Processes</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Audit of IT Infrastructure, Applications, and
+                    Controls</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Gap Analysis and Compliance Roadmaps</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Cyber Hygiene and Policy Compliance Support</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                Capacity Building & Professional Training
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Training for Young Graduates Aspiring to Become Cyber
+                    Officers</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Workshops for Staff on Secure IT Practices</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Bootcamps on Penetration Testing, SOC Operations, and Cyber
+                    Threat Intelligence</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Mentorship for Career Development in Cybersecurity</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                Cybersecurity Awareness Campaigns
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Tailored Awareness Sessions for Public Institutions,
+                    Schools, and Corporates</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Interactive Simulations and Social Engineering
+                    Awareness</span
+                  >
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Cyber Hygiene Best Practices Training</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow card-hover-effect"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-90 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative p-8 h-full flex flex-col z-10">
+              <div
+                class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center mb-6"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6 text-blue-900"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-4">
+                Customized Cybersecurity Solutions
+              </h3>
+              <ul class="space-y-2 text-blue-200 flex-grow">
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Secure Web and Mobile Application Development</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Security Automation Tools</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span>Identity and Access Management Tools</span>
+                </li>
+                <li class="flex items-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <span
+                    >Development of Threat Detection and Monitoring
+                    Systems</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offensive Services Section -->
+      <div class="py-20 animate-on-scroll">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-4"
+            >
+              Offensive Security Services
+            </h2>
+            <p
+              class="text-lg text-blue-800 dark:text-blue-200 max-w-3xl mx-auto"
+            >
+              Proactively identify and address security weaknesses before
+              attackers do
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Penetration Testing -->
+            <div class="flip-card h-96">
+              <div class="flip-card-inner relative w-full h-full">
+                <div
+                  class="flip-card-front absolute w-full h-full bg-blue-900 text-white rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl text-yellow-400 font-bold mb-4">
+                      Penetration Testing
+                    </h3>
+                    <p class="text-lg mb-4">
+                      Simulated cyber attacks to evaluate the security of your
+                      systems and identify vulnerabilities.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flip-card-back absolute w-full h-full bg-yellow-400 text-blue-900 rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">What We Offer</h3>
+                    <ul class="text-left space-y-2">
+                      <li>• Web application testing</li>
+                      <li>• Network penetration testing</li>
+                      <li>• Wireless security assessments</li>
+                      <li>• Social engineering simulations</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Vulnerability Assessment -->
+            <div class="flip-card h-96">
+              <div class="flip-card-inner relative w-full h-full">
+                <div
+                  class="flip-card-front absolute w-full h-full bg-blue-900 text-white rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl text-yellow-400 font-bold mb-4">
+                      Vulnerability Assessment
+                    </h3>
+                    <p class="text-lg mb-4">
+                      Comprehensive scanning and analysis of your systems to
+                      identify security weaknesses.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flip-card-back absolute w-full h-full bg-yellow-400 text-blue-900 rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Our Approach</h3>
+                    <ul class="text-left space-y-2">
+                      <li>• Automated vulnerability scanning</li>
+                      <li>• Manual verification of findings</li>
+                      <li>• Risk prioritization</li>
+                      <li>• Remediation guidance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Red Teaming -->
+            <div class="flip-card h-96">
+              <div class="flip-card-inner relative w-full h-full">
+                <div
+                  class="flip-card-front absolute w-full h-full bg-blue-900 text-white rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl text-yellow-400 font-bold mb-4">
+                      Red Teaming
+                    </h3>
+                    <p class="text-lg mb-4">
+                      Real-world attack simulations to test your organization's
+                      detection and response capabilities.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flip-card-back absolute w-full h-full bg-yellow-400 text-blue-900 rounded-lg p-6 shadow-lg flex flex-col justify-center"
+                >
+                  <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Red Team Operations</h3>
+                    <ul class="text-left space-y-2">
+                      <li>• Multi-vector attack simulations</li>
+                      <li>• Adversary emulation</li>
+                      <li>• Purple teaming exercises</li>
+                      <li>• Comprehensive reporting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Security Operation Center -->
+        <div class="mt-16 animate-on-scroll mx-2">
+          <div
+            class="bg-blue-900 dark:bg-blue-800 rounded-xl p-8 md:p-12 shadow-lg"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-4">
+                  Security Operation Center & MSSP
+                </h3>
+                <p class="text-blue-200 mb-6">
+                  We build Security Operation Centers and provide Managed
+                  Security Service Provider (MSSP) services for our clients to
+                  help them have clear visibility of their infrastructure to
+                  proactively deter threats.
+                </p>
+                <button>
+                  <a
+                    href="#contact"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-6 py-3 rounded-md transition-colors"
+                  >
+                    Get In Touch →
+                  </a>
+                </button>
+              </div>
+              <div class="relative h-64 md:h-80 rounded-lg overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                  alt="Security Operation Center"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Services -->
+        <div
+          class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 animate-on-scroll mx-4"
+        >
+          <!-- Digital Forensics -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Digital Forensics
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              We conduct digital forensics investigations to gather and analyze
+              electronic evidence, uncovering digital footprints, identifying
+              potential threats, and facilitating legal proceedings.
+            </p>
+          </div>
+
+          <!-- Incident Response -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Incident Response
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              We execute effective incident response protocols to swiftly
+              detect, analyze, and mitigate cybersecurity incidents, minimizing
+              the impact of breaches and restoring systems.
+            </p>
+          </div>
+
+          <!-- Malware Analysis -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-6 rounded-xl shadow-md card-hover-effect"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Malware Analysis
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300 mb-4">
+              Perform comprehensive malware analysis to dissect malicious code,
+              identify behavior patterns, and understand attack vectors,
+              enabling proactive threat detection, containment, and eradication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Programs Section -->
+    <section id="training" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 dark:text-white mb-4">
+            Programs & Training
+          </h2>
+          <p
+            class="text-xl text-primary-800 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            Specialized cybersecurity training tailored for different roles and
+            expertise levels
+          </p>
+        </div>
+
+        <!-- Tabbed Content -->
+        <div class="max-w-4xl mx-auto">
+          <!-- Tab Buttons -->
+          <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button
+              class="tab-button px-6 py-2 rounded-full font-medium bg-yellow-400 text-blue-900"
+              data-tab="executive"
+            >
+              Executive Training
+            </button>
+            <button
+              class="tab-button px-6 py-2 rounded-full font-medium bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+              data-tab="people"
+            >
+              People Training
+            </button>
+            <button
+              class="tab-button px-6 py-2 rounded-full font-medium bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-200 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
+              data-tab="it"
+            >
+              IT Professionals
+            </button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content active" id="executive">
+            <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 shadow-lg">
+              <h3
+                class="text-2xl font-bold text-primary-900 dark:text-white mb-4"
+              >
+                Executive Training
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Strategic cybersecurity leadership programs for C-level
+                executives and decision-makers.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Cyber risk management</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Security governance</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Incident response planning</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Compliance frameworks</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content hidden" id="people">
+            <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 shadow-lg">
+              <h3
+                class="text-2xl font-bold text-primary-900 dark:text-white mb-4"
+              >
+                People Training
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Comprehensive security awareness programs for all employees to
+                build human firewalls.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Phishing awareness</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Password security</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Social engineering defense</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Data protection best practices</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content hidden" id="it">
+            <div class="bg-gray-50 dark:bg-gray-700 rounded-xl p-8 shadow-lg">
+              <h3
+                class="text-2xl font-bold text-primary-900 dark:text-white mb-4"
+              >
+                IT Professionals
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-6">
+                Advanced technical training for IT staff to secure networks and
+                systems effectively.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Penetration testing</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Network defense</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Malware analysis</span
+                  >
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-800 p-1 rounded-full m-1 -mt-0.5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 text-blue-600 dark:text-blue-300"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </div>
+                  <span class="text-gray-700 dark:text-gray-300"
+                    >Secure coding practices</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- eLearning Platform -->
+      <div class="m-4 bg-blue-900 text-white animate-on-scroll rounded-xl p-8">
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-4xl font-bold mb-6">eLearning Platform</h2>
+              <p class="text-xl text-blue-200 mb-8">
+                Learn with TRUSTERLABS - Democratizing access to cybersecurity
+                education across Africa
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="bg-yellow-400 text-blue-900 rounded-full p-2 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">
+                      Online Cybersecurity Courses
+                    </h3>
+                    <p class="text-blue-200">
+                      From beginner to advanced levels with hands-on labs and
+                      virtual environments
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-yellow-400 text-blue-900 rounded-full p-2 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">
+                      Certification Preparation
+                    </h3>
+                    <p class="text-blue-200">
+                      Resources and career guidance for international
+                      certifications (CyberOps, CompTIA, CEH, CISSP)
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="bg-yellow-400 text-blue-900 rounded-full p-2 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 class="text-xl font-bold mb-2">Live Webinars</h3>
+                    <p class="text-blue-200">
+                      Instructor-led sessions with cybersecurity experts and
+                      live Q&A
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="bg-white rounded-xl shadow-2xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                  alt="eLearning Platform"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="absolute -bottom-6 -right-6 w-1/2 h-1/2 bg-yellow-400 rounded-xl shadow-xl overflow-hidden z-10"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80"
+                  alt="Online Learning"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Target Clients Section -->
+    <section class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 dark:text-white mb-4">
+            Our Target Clients
+          </h2>
+          <p
+            class="text-xl text-primary-800 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            We serve organizations across various sectors with tailored
+            cybersecurity solutions
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Client 1 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Government Agencies & Institutions
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Protecting national infrastructure and sensitive government data
+              with state-of-the-art security solutions
+            </p>
+          </div>
+
+          <!-- Client 2 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Financial Institutions
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Securing banking systems, transactions, and customer financial
+              data against sophisticated threats
+            </p>
+          </div>
+
+          <!-- Client 3 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Educational Institutions
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Safeguarding research data, student records, and campus networks
+              while promoting cyber awareness
+            </p>
+          </div>
+
+          <!-- Client 4 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Private Companies & Startups
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Cost-effective security solutions tailored for businesses of all
+              sizes, from SMEs to growing startups
+            </p>
+          </div>
+
+          <!-- Client 5 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              NGOs & International Organizations
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Protecting sensitive humanitarian data and ensuring secure
+              operations in challenging environments
+            </p>
+          </div>
+
+          <!-- Client 6 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-yellow-400 mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3">
+              Individuals Customers
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Protecting sensitive humanitarian data and ensuring secure
+              operations in challenging environments
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 dark:text-white mb-4">
+            Why Choose TRUSTERLABS LTD?
+          </h2>
+          <p
+            class="text-xl text-primary-800 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            What sets us apart in the cybersecurity landscape
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Feature 1 -->
+          <div class="flex">
+            <div class="mr-6">
+              <div class="bg-yellow-400 text-blue-900 rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3"
+              >
+                Local Expertise with Global Standards
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300">
+                Our professionals are trained to handle local needs with
+                internationally recognized methodologies. We understand the
+                unique cybersecurity challenges faced in the African context
+                while maintaining world-class standards.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="flex">
+            <div class="mr-6">
+              <div class="bg-yellow-400 text-blue-900 rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3"
+              >
+                Passion-Driven Team
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300">
+                Founded by cybersecurity professionals who live and breathe
+                digital defense. Our team is composed of certified experts who
+                are genuinely passionate about protecting your digital assets.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="flex">
+            <div class="mr-6">
+              <div class="bg-yellow-400 text-blue-900 rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3"
+              >
+                Affordable, Accessible & Impactful
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300">
+                We ensure our services and trainings are inclusive and tailored
+                to real-world challenges. Our solutions are designed to provide
+                maximum security impact without breaking your budget.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="flex">
+            <div class="mr-6">
+              <div class="bg-yellow-400 text-blue-900 rounded-full p-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-3"
+              >
+                Innovation at the Core
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300">
+                We continuously invest in R&D to offer modern tools and
+                automation in cybersecurity. Our team stays ahead of emerging
+                threats to provide proactive protection for your organization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources Section with Functional Links -->
+    <section id="resources" class="py-20 bg-white dark:bg-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-4">
+            Cybersecurity Resources
+          </h2>
+          <p class="text-lg text-blue-800 dark:text-blue-200 max-w-3xl mx-auto">
+            Valuable external resources to enhance your cybersecurity knowledge
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Resource 1 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                GOVERNMENT RESOURCE
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://www.cisa.gov/cybersecurity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  CISA Cybersecurity Resources
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                The Cybersecurity & Infrastructure Security Agency provides
+                tools, services, and information for organizations.
+              </p>
+              <a
+                href="https://www.cisa.gov/cybersecurity"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 2 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                FRAMEWORK
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://www.nist.gov/cyberframework"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  NIST Cybersecurity Framework
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                The National Institute of Standards and Technology framework for
+                improving critical infrastructure cybersecurity.
+              </p>
+              <a
+                href="https://www.nist.gov/cyberframework"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 3 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                NEWS & UPDATES
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://www.krebsonsecurity.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  Krebs on Security
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                In-depth security news and investigation by cybersecurity
+                journalist Brian Krebs.
+              </p>
+              <a
+                href="https://www.krebsonsecurity.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 4 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                TRAINING
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://www.cybrary.it"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  Cybrary Free Cybersecurity Training
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                Free online cybersecurity courses and training resources for all
+                skill levels.
+              </p>
+              <a
+                href="https://www.cybrary.it"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 5 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                TOOLS
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://owasp.org/www-project-top-ten/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  OWASP Top 10 Security Risks
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                The Open Web Application Security Project's standard awareness
+                document for developers.
+              </p>
+              <a
+                href="https://owasp.org/www-project-top-ten/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Resource 6 -->
+          <div
+            class="bg-gray-50 dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+          >
+            <div class="p-6">
+              <div class="text-xs text-yellow-500 font-semibold mb-2">
+                COMMUNITY
+              </div>
+              <h3
+                class="text-xl font-bold text-blue-900 dark:text-blue-300 mb-2"
+              >
+                <a
+                  href="https://www.reddit.com/r/cybersecurity/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
+                >
+                  Cybersecurity Community
+                </a>
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 text-sm mb-4">
+                Active Reddit community discussing cybersecurity news, careers,
+                and best practices.
+              </p>
+              <a
+                href="https://www.reddit.com/r/cybersecurity/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-900 dark:text-blue-300 hover:text-yellow-500 font-medium text-sm flex items-center transition-colors"
+              >
+                Visit Resource
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 ml-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- ========== Team Section starts by here ========== -->
+
+
+<section 
+  class="team py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800"
+>  
+
+  <div class="team-carousel-wrapper py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div class="container mx-auto px-4">      
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-900 dark:text-white mb-3">
+            Our <span class="text-yellow-500">Cyber Experts</span>
+          </h2>
+          <p class="text-md text-blue-800 dark:text-blue-200 max-w-2xl mx-auto">
+            The dedicated professionals securing your digital future
+          </p>
+        </div>
+            
+    </div>   
+  </div>
+<div class="team-carousel-wrapper py-16 bg-gradient-to-b from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 ml-20 mr-20"> 
+<div class="carousel-container relative flex items-center overflow-hidden w-100%" style="height:500px ;">
+  <button class="prev absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 text-white p-2 rounded-full" onclick="moveCarousel(-1)">
+    &#10094;
+  </button>
+  
+  <div class="carousel-track w-full flex transition-transform duration-500" id="team-carousel" style="will-change: transform ;">
+    <!-- Profile items -->
+    <!-- Profile 1 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/dominique.png" alt="Dominique HARELIMANA" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Dominique HARELIMANA</h3>
+              <p class="text-yellow-500 text-sm mb-2">Senior Advisor</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Cybersecurity expert with 15+ years of experience in enterprise security.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <!-- 4 customizable social media links -->
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+<!-- Profile 1 -->
+    <!-- Profile 2 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/audace.png" alt="Audace MUGWANEZA MANZI" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Audace MUGWANEZA MANZI</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Lead architect specializing in secure application development.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+
+<!-- Profile 2 -->
+<!-- Example Profile 3 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/emmanuel.png" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Emmanuel SHYIRAMBERE</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+
+
+<!-- Example Profile 3 -->
+<!-- Example Profile 4 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/Leoncie Niyonkuru.png" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Leoncie Niyonkuru</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+
+
+<!-- Example Profile 4 -->
+<!-- Example Profile 5 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/rene.webp" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Jean René MUNYESHYAKA</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Principal Security Engineer and full stack developer.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+
+<!-- Example Profile 5 -->
+
+<!-- Example Profile 6 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/Lucien habineza.jpg" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Lucien Habineza</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+
+<!-- Example Profile 6 -->
+
+<!-- Example Profile 7 -->
+          <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/Prince Louis.png" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Prince Louis</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+<!-- Example Profile 7 -->
+
+<!-- Example Profile 8 -->
+        <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/Felix NIYONTEZE.jpg" alt="Emmanuel SHYIRAMBERE" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Felix NIYONTEZE</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+<!-- Example Profile 8 -->
+<!-- Example Profile 9 -->
+        <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/anitha.png" alt="Anitha  Umutoni" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Anitha  Umutoni</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">CEO, Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+<!-- Example Profile 9 -->
+ <!-- Example Profile 10 -->
+        <div class="profile mx-4 flex-shrink-0 w-70 bg-white dark:bg-gray-700 rounded-lg p-4 shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="relative mx-auto mb-4 w-40 h-40 rounded-full overflow-hidden ring-4 ring-yellow-400 ring-offset-2 ring-offset-blue-50 dark:ring-offset-gray-800">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-blue-700 opacity-10 rounded-full"></div>
+              <img src="./images/team/Mising Profile.png" alt="Mising Profile" class="w-full h-full object-cover rounded-full filter grayscale hover:filter-none transition-all duration-300" style="object-position: center top" />
+            </div>
+            <div class="text-center px-2">
+              <h3 class="text-xl font-bold text-blue-900 dark:text-white mb-1">Mising Profile</h3>
+              <p class="text-yellow-500 text-sm mb-2">Cofounder & Head Developer</p>
+              <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">Security-focused developer with expertise in secure coding.</p>
+              <!-- Social Links -->
+              <div class="flex justify-center space-x-3">
+                <a href="https://facebook.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-600 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Facebook"></a>
+                <a href="https://twitter.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-400 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Twitter"></a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-blue-700 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="LinkedIn"></a>
+                <a href="https://instagram.com/yourprofile" target="_blank" class="social-link bg-gray-200 hover:bg-pink-500 text-gray-800 hover:text-white rounded-full p-2 transition-colors" aria-label="Instagram"></a>
+              </div>
+            </div>
+          </div>
+<!-- Example Profile 10 -->
+    <!-- etc. -->
+  </div>
+  
+  <button class="next absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-blue-600 text-white p-2 rounded-full" onclick="moveCarousel(1)">
+    &#10095;
+  </button>
+  </div>
+</div>
+
+</section>
+
+    
+<!-- ========== Team Section ends by here ========== -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 dark:text-white mb-4">
+            Contact Us
+          </h2>
+          <p
+            class="text-xl text-primary-800 dark:text-gray-300 max-w-3xl mx-auto"
+          >
+            Ready to secure your organization? Reach out to our team of experts.
+          </p>
+        </div>
+
+        <div class="container mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h2
+                class="text-4xl font-bold text-blue-900 dark:text-blue-300 mb-6"
+              >
+                Get In Touch
+              </h2>
+              <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">
+                Have questions about our services or want to discuss your
+                cybersecurity needs? Reach out to our team.
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 rounded-full p-3 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-semibold text-blue-900 dark:text-white mb-1"
+                    >
+                      Phone
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      +250 785 135 124
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 rounded-full p-3 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-semibold text-blue-900 dark:text-white mb-1"
+                    >
+                      Email
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      info@trusterlabs.com
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 rounded-full p-3 mr-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-semibold text-blue-900 dark:text-white mb-1"
+                    >
+                      Headquarters
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                      Kigali, Rwanda
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex space-x-4 mt-8">
+                  <a
+                    href="#"
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-3 transition-colors"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-3 transition-colors"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      ></path>
+                    </svg>
+                  </a>
+                  <a
+                    href="#"
+                    class="bg-blue-100 dark:bg-blue-900/30 text-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800 rounded-full p-3 transition-colors"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+              <h3 class="text-2xl font-bold text-blue-900 dark:text-white mb-6">
+                Send Us a Message
+              </h3>
+              <form id="contact-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      >Full Name *</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      >Work Email *</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="company"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                    >Company Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label
+                      for="size"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      >Company Size *</label
+                    >
+                    <select
+                      id="size"
+                      name="size"
+                      required
+                      class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                    >
+                      <option value="">Please Select</option>
+                      <option value="1-10">1-10 employees</option>
+                      <option value="11-50">11-50 employees</option>
+                      <option value="51-200">51-200 employees</option>
+                      <option value="201-500">201-500 employees</option>
+                      <option value="501-1000">501-1000 employees</option>
+                      <option value="1000+">1000+ employees</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="country"
+                      class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                      >HQ Country *</label
+                    >
+                    <select
+                      id="country"
+                      name="country"
+                      required
+                      class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                    >
+                      <option value="">Please Select</option>
+                      <option value="Rwanda">Rwanda</option>
+                      <option value="Kenya">Kenya</option>
+                      <option value="Uganda">Uganda</option>
+                      <option value="Tanzania">Tanzania</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="inquiry"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                    >Inquiry Type *</label
+                  >
+                  <select
+                    id="inquiry"
+                    name="inquiry"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="Consultation">Consultation Request</option>
+                    <option value="Training">Training Inquiry</option>
+                    <option value="Partnership">Partnership Opportunity</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                    >What are you working on and how we can help? *</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-md transition-colors transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          <div class="lg:col-span-2">
+            <h3 class="text-2xl font-bold mb-4">
+              TRUSTER <span class="text-yellow-400">LABS</span>
+            </h3>
+            <p class="mb-4 text-blue-200">
+              <span class="font-bold text-yellow-400"
+                >Fortify. Empower. Defend.</span
+              >
+              <br />Homegrown cybersecurity training and solutions, empowering
+              local talent to secure Africa’s digital future
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-200 hover:text-yellow-400 transition-colors"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-200 hover:text-yellow-400 transition-colors"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-200 hover:text-yellow-400 transition-colors"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-200 hover:text-yellow-400 transition-colors"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Company</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Press</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Resources</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Whitepapers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Webinars</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Events</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold mb-4">Legal</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-blue-200 hover:text-yellow-400 transition-colors"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-blue-800 mt-12 pt-8 text-center text-blue-300"
+        >
+          <p>
+            © <span id="current-year"></span> TRUSTER LABS. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="fixed bottom-8 right-8 bg-secondary-500 hover:bg-secondary-400 text-primary-900 w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all opacity-0 invisible"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- JavaScript -->
+  
+
+    <script src="js/main.js"></script>
+    <script src="js/tailwind.js"></script>
+    <script src="js/profiles.js"></script>
+    
+  </body>
+</html>

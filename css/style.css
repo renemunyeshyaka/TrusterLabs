@@ -1,0 +1,297 @@
+
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffd600;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .glass {
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(26, 35, 126, 0.75);
+      }
+
+      .text-stroke {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+        color: transparent;
+      }
+
+      .text-fill {
+        background: linear-gradient(90deg, #ffd600, #ffea00);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        background-repeat: no-repeat;
+      }
+
+      .scroll-snap {
+        scroll-snap-type: x mandatory;
+      }
+
+      .scroll-snap > * {
+        scroll-snap-align: start;
+      }
+
+      .scroll-snap-section {
+        scroll-snap-align: start;
+      }
+
+      .horizontal-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+      }
+
+      .horizontal-scroll::-webkit-scrollbar {
+        display: none;
+      }
+
+      .horizontal-scroll-card {
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .horizontal-scroll-item {
+        scroll-snap-align: start;
+      }
+
+      .card-hover-effect {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card-hover-effect:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .card-3d {
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+
+      .card-3d:hover {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card {
+        perspective: 1000px;
+      }
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 0.5rem;
+        overflow: hidden;
+      }
+
+      .flip-card-back {
+        transform: rotateY(180deg);
+      }
+
+      /* Black & white filter */
+      .filter {
+        filter: grayscale(100%);
+      }
+
+      /* Ensure images fit perfectly in circles */
+      .rounded-full {
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .input-float label {
+        transition: all 0.3s ease;
+      }
+
+      .input-float input:focus + label,
+      .input-float input:not(:placeholder-shown) + label,
+      .input-float textarea:focus + label,
+      .input-float textarea:not(:placeholder-shown) + label {
+        transform: translateY(-1.5rem) scale(0.85);
+        color: #ffd600;
+      }
+
+      /* ================= Teams Container ================= */
+      
+
+      /* Carousel container styling */
+
+
+
+      /* Carousel container styling */
+
+
+    .team-carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    width: 800px; /* or fixed width like 800px */
+    }
+
+    /* Carousel track styling */
+    .team-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    }
+
+    /* Profile styling */
+    .profile {
+    flex: 0 0 auto;
+    width: 250px; /* adjust as needed */
+    margin: 0 20px;
+    text-align: center;
+    }
+
+    /* Profile image hover effect */
+    .profile-img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Navigation buttons */
+    .carousel-prev,
+    .carousel-next {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    color: #333;
+    }
+
+    .carousel-prev {
+    left: 0;
+    }
+    .carousel-next {
+    right: 0;
+    }
+
+    /* Social links container */
+    .social-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    }
+
+    /* Social link icons (using background images or fonts) */
+    .social-link {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-color 0.3s, transform 0.2s;
+    }
+
+    /* Specific social media icons (replace with your icons or use font icons) */
+    .social-link.facebook {
+    background-image: url('facebook-icon.png');
+    }
+    .social-link.twitter {
+    background-image: url('twitter-icon.png');
+    }
+    .social-link.linkedin {
+    background-image: url('linkedin-icon.png');
+    }
+    .social-link.instagram {
+    background-image: url('instagram-icon.png');
+    }
+
+    /* Hover color for social links */
+    .social-link:hover {
+    background-color: #ddd; /* or your hover color */
+    transform: scale(1.2);
+    }
+
+
+    .carousel-container {
+    position: relative;
+    }
+    .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    }
+    .profile {
+    flex-shrink: 0;
+    }
+
+    /* Profile hover effect for scaling */
+    .profile:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    }
+
+    /* Social link hover background & color */
+    .social-link {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+    }
+    .social-link:hover {
+    /* Adjust hover background or icon color here if using SVG icons */
+    /* Example: background-color: #3b82f6; color: white; */
+    }
+
+    /* Profile image hover color effect (remove grayscale on hover) */
+    img.filter {
+    filter: grayscale(100%);
+    }
+    img.filter:hover {
+    filter: none;
+    }
