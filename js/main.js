@@ -84,6 +84,25 @@
         }
       });
 
+      // Show/hide button on scroll
+        const backToDownButton = document.getElementById("back-to-down");
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToDownButton.classList.remove("opacity-0", "invisible");
+            backToDownButton.classList.add("opacity-100", "visible");
+          } else {
+            backToDownButton.classList.add("opacity-0", "invisible");
+            backToDownButton.classList.remove("opacity-100", "visible");
+          }
+        });
+
+        // Scroll down to a specific section
+        backToDownButton.addEventListener("click", () => {
+          // Example: scroll to section with id='about'
+          document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+        });
+
+
       // Back to Top Button
       const backToTopButton = document.getElementById("back-to-top");
       window.addEventListener("scroll", () => {
@@ -147,27 +166,7 @@
 
       // owl carousel script
 
-    $('.carousel').owlCarousel({
-        margin: 20,
-        loop: true,
-        autoplayTimeOut: 2000,
-        autoplayHoverPause: true,
-        responsive: {
-            0:{
-                items: 1,
-                nav: false
-            },
-            600: {
-                items: 2,
-                nav: false
-            },
-            1000:{
-                items: 3,
-                nav: false
-            }
-        }
-
-    });
+   
 
       // Apply to elements with animate-on-scroll class
       const animatedElements = document.querySelectorAll(".animate-on-scroll");

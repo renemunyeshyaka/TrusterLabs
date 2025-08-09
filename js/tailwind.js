@@ -36,6 +36,7 @@
                 "0%": { opacity: "0" },
                 "100%": { opacity: "1" },
               },
+              
               slideUp: {
                 "0%": {
                   opacity: "0",

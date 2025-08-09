@@ -150,11 +150,6 @@
       }
 
       /* ================= Teams Container ================= */
-      
-
-      /* Carousel container styling */
-
-
 
       /* Carousel container styling */
 
@@ -170,14 +165,14 @@
     /* Carousel track styling */
     .team-carousel {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 1s ease;
     will-change: transform;
     }
 
     /* Profile styling */
     .profile {
     flex: 0 0 auto;
-    width: 250px; /* adjust as needed */
+    width: 405px; /* adjust as needed */
     margin: 0 20px;
     text-align: center;
     }
@@ -317,4 +312,13 @@
 .social-links a:hover {
     background-color: var(--primary-color);
     color: var(--white);
+}
+
+@media (max-width: 500px){
+
+    .profile {
+    width: 250px; /* adjust as needed */
+    margin: 0 10px;
+    }
+    
 }
