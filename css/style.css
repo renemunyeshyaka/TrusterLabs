@@ -317,11 +317,10 @@
 @media (max-width: 500px){
 
     .profile {
-    width: 250px; /* adjust as needed */
-    height: 500px;
-    margin: 0 5px;
+    width:87% ; /* adjust as needed */
+    height: auto;
+    margin: 0 0px;
     }
-
 
       .nav-link {
         position: relative;
