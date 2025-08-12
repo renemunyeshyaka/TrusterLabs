@@ -318,7 +318,17 @@
 
     .profile {
     width: 250px; /* adjust as needed */
-    margin: 0 10px;
+    height: 500px;
+    margin: 0 5px;
     }
+
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        height: 5px;
+      }
     
 }
